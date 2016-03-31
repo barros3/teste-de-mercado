@@ -1,3 +1,9 @@
+
+
+O Usuário do notebook onde desenvolvi esta aplicação é minha esposa. Por isso o nome do author esta errado.
+->aplicação desenvolvida por @Author Luciano Barros
+
+
 # [Start Bootstrap](http://startbootstrap.com/) - [Thumbnail Gallery](http://startbootstrap.com/template-overviews/thumbnail-gallery/)
 
 [Thumbnail Gallery](http://startbootstrap.com/template-overviews/thumbnail-gallery/) is a responsive thumbnail grid template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).

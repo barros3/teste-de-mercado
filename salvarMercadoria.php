@@ -9,4 +9,6 @@
 	$insert = "INSERT INTO test.mercadoria (cod_mercadoria, tipo_mercadoria, nome, quantidade, preco, tipo_negocio) VALUES ('$cod_mercadoria', '$tipo_mercadoria', '$nome', '$quantidade', '$preco', '$tipo_negocio')" or die("inser falhou!!!!");
 
 	$sql = mysql_query("$insert");
+
+	 return header("Location:cadastraMercadoria.php");
 ?>

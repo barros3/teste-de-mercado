@@ -14,22 +14,74 @@
          include("connection.php");
     ?>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/thumbnail-gallery.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script language=javascript type="text/javascript">
+        function validaCampos() {
+            if(document.getElementById("cod_mercadoria").value =="")
+                {
+                    alert('Preencha o campo "Codigo"!');
+                    document.getElementById("cod_mercadoria").focus();
+                return false;
+                }
+            else        
+                if(document.getElementById("cod_mercadoria").value =="0")
+                {
+                    alert("O campo Codigo não pode ser '0'!!!");
+                    document.getElementById("cod_mercadoria").focus();
+                return false;
+                }
+            else
+                if(document.getElementById("tipo_mercadoria").value=="")
+                {
+                    alert("Preencha o campo 'Tipo da Mercadoria'!");
+                    document.getElementById("tipo_mercadoria").focus();
+                return false;
+                }
+            else
+                if(document.getElementById("nome").value=="")
+                {
+                alert("Preencha o campo 'Nome'!");
+                document.getElementById("nome").focus();
+                return false;
+                }
+            else
+                if(document.getElementById("quantidade").value=="")
+                {   
+                alert("Preencha o campo 'Quantidade', ele deve ser diferente de nulo e maior que '0'!");
+                document.getElementById("quantidade").focus();
+                return false;
+                }   
+            else
+                if(document.getElementById("tipo_negocio").value=="")
+                {
+                alert("Voce deve selecionar o Tipo do Negocio!");
+                document.getElementById("tipo_negocio").focus();
+                return false;
+                }   
+            else
+                return true;
+            }
 
+            function alert(sucess) {
+            var display = document.getElementById(sucess).style.display;
+
+            if(display == "none")
+                document.getElementById(sucess).style.display = 'block';
+            else
+                document.getElementById(sucess).style.display = 'none';
+            }
+    </script>
+
+   
 </head>
 
-  <body class"well well-sm">
+<body class"well well-sm">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,13 +115,19 @@
         </div>
         <!-- /.container -->
     </nav>
-	<body>
+    <div id="danger" class="alert alert-danger" style="display: none;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+    </div>
+    <div id="sucess" class="alert alert-success" style="display: none;">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+       <strong>Success!</strong> This alert box could indicate a successful or positive action.
+    </div>
 		<div class="container">
 		    <div class="row">
 		        <div class="col-md-12">
-	                <form class="form-horizontal" method="post" id="formMercadoria" name="signup" method="POST" action="salvarMercadoria.php" onsubmit=" return validaCampos(); return false;">
+	                <form class="form-horizontal" id="formMercadoria" name="signup" method="POST" action="salvarMercadoria.php" onsubmit="return validaCampos(); return false;">
                         <h1 class="page-header">Cadastrar Mercadoria</h1>
-                        <div class="alert alert-error" style=""></div>  
                         <div class="form-group">
                             <div class="col-md-3">
                                 <input id="cod_mercadoria" name="cod_mercadoria" type="text" placeholder="Codigo" class="form-control">
@@ -109,6 +167,5 @@
 		        </div>
 		    </div>
 		</div>
-
 	</body>
 </html>

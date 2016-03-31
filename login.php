@@ -56,7 +56,7 @@
                         <a href="cadastraMercadoria.php">Cadastrar</a>
                     </li>
                     <li>
-                        <a href="#">Entrar</a>
+                        <a href="login.php">Entrar</a>
                     </li>
                 </ul>
             </div>
@@ -69,11 +69,11 @@
 		    <div class="row">
 		        <div class="col-md-12">
 		            <div class="container droppedHover">
-                        <form class="form-signin" role="form">
+                        <form class="form-signin" role="form" action="login.php">
                             <h2 class="form-signin-heading" contenteditable="false" style="text-align:center; ">Login</h2>
 
-                            <input type="text" class="form-control" placeholder="Email" required="" autofocus="" contenteditable="false">
-                            <input type="password" class="form-control" placeholder="CPF" required="" contenteditable="false">
+                            <input id="login" name="login" type="text" class="form-control" placeholder="Login" required="" autofocus="" contenteditable="false">
+                            <input id="senha" name="senha" type="password" class="form-control" placeholder="Senha" required="" contenteditable="false">
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
                         </form>
                         <br>

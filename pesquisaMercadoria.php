@@ -13,8 +13,7 @@
 
     <?php
       require_once 'connection.php';
-     
-
+    
        $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
       # LISTA MERCADORIA
       $result = "SELECT * FROM test.mercadoria" or die("Nao consegui realizar a consulta!!!");
@@ -126,11 +125,19 @@
                           <td>&nbsp;$tipo_negocio</td>
                         </tr>\n";
                     }
-                    for($i = 1; $i < $numPaginas + 1; $i++) {
-                         echo "<a href='pesquisaMercadoria.php?pagina=$i'>".$i."</a> ";
-                    }
+                    
                   ?>
                 </tbody>
+                <?php 
+                  for($i = 1; $i < $numPaginas + 1; $i++) {
+                       echo "
+                            <ul class='pagination'>
+                              <li><a href='pesquisaMercadoria.php?pagina=$i'>".$i."</a></li>
+                            </ul>
+                              ";
+                    }
+                 ?>
+
               </table>
             </div>
           </div>

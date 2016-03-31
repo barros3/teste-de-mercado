@@ -1,6 +1,6 @@
  <script type="text/javascript">
         function validaCampos() {
-            if(document.getElementById('cod_mercadoria').value =="")
+            if(document.getElementById("cod_mercadoria").value =="")
                 {
                     alert('Preencha o campo "Codigo"!');
                     document.getElementById("cod_mercadoria").focus();
@@ -9,7 +9,7 @@
             else        
                 if(document.getElementById("cod_mercadoria").value =="0")
                 {
-                    alert("O campo Codigo não pode ser '0'!!!");
+                    alert('O campo Codigo não pode ser '0'!!!');
                     document.getElementById("cod_mercadoria").focus();
                 return false;
                 }

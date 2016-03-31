@@ -27,6 +27,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
     <script language=javascript type="text/javascript">
 
     function mascaraData(campoData)
@@ -46,7 +47,6 @@
         }
         
     }
-
 
     function Apenas_Numeros(caracter)
     {
@@ -147,7 +147,6 @@
      
     
 </script>
-
 </head>
 
   <body class"well well-sm">
@@ -192,6 +191,14 @@
                         <h1 class="page-header">Cadastrar Usuario</h1>
                         <div class="form-group">
                             <div class="col-md-3">
+                                <input id="login" name="login" type="text" placeholder="Login" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <input id="senha" name="senha" type="text" placeholder="Senha" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
                                 <input id="nome" name="nome" type="text" placeholder="Nome" class="form-control">
                             </div>
                             <div class="col-md-4">
@@ -208,7 +215,7 @@
                             </div>
                             <div class="col-md-4">
                                 <input id="data_nascimento
-                                " name="data_nascimento" type="text" placeholder="Data de Nascimento" class="form-control" maxlength="10">
+                                " name="data_nascimento" type="text" placeholder="Data de Nascimento dd/mm/aaaa" class="form-control" maxlength="10">
                             </div>
                             
                             <div class="col-md-3">
